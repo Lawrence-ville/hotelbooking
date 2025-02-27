@@ -1,0 +1,224 @@
+/* default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Style */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header Style */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+main h2 {
+    font-size: 28px;
+    color: #004080;
+}
+
+main p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* this style is for Smooth Transition Images 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    z-index: -1;
+}
+*/
+
+/* Hero Images Wrapper (Fix width issue) */
+.hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: calc(100vw * 5); /*4 images plus one duplicate to loop continously*/
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual Image */
+.hero-img {
+    width: 100vw; /* Each image takes full screen width */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+/* Hero Content (Text & Button) */
+.hero-content {
+    position: absolute;
+    z-index: 2; /* Keeps text above the sliding images */
+}
+
+
+/* Overlay for Image Transition */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 12px 25px;
+    font-size: 20px;
+    color: white;
+    background-color: #e7c712;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #cc5500;
+    color: aqua;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Style on the short display on the room section */
+.rooms {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.rooms h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+/* Room Container */
+.room-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Room Styling */
+.room {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.room h3 {
+    margin: 15px 0 10px;
+    color: #333;
+    font-size: 22px;
+}
+
+.room p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Hover Effect */
+.room:hover {
+    transform: scale(1.15);
+}
