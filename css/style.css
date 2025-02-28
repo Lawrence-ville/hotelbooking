@@ -59,7 +59,7 @@ main p {
 }
 
 
-/* Hero Section */
+/* style for the Hero Section */
 .hero {
     width: 100%;
     height: 400px;
@@ -76,7 +76,7 @@ main p {
 }
 
 
-/* this style is for Smooth Transition Images 
+/* this style is for Smooth Transition Images but its not working
 .hero::before {
     content: "";
     position: absolute;
@@ -92,7 +92,7 @@ main p {
 }
 */
 
-/* Hero Images Wrapper (Fix width issue) */
+/* Hero Images Wrapper */
 .hero-images {
     position: absolute;
     top: 0;
@@ -159,14 +159,8 @@ main p {
     background-color: #cc5500;
     color: aqua;
 }
+/*end of the hero section style*/
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
 
 /* Style on the short display on the room section */
 .rooms {
@@ -221,4 +215,72 @@ main p {
 /* Hover Effect */
 .room:hover {
     transform: scale(1.15);
+}
+
+/*end of the  rooms style display*/
+
+
+/* style for the Conference Rooms Section */
+.conference-rooms {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.conference-rooms h2 {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+/* Conference Room Container */
+.conference-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Conference Room */
+.conference-room {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.conference-room img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.conference-room h3 {
+    margin: 15px 0 10px;
+    color: #333;
+    font-size: 22px;
+}
+
+.conference-room p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Hover Effect */
+.conference-room:hover {
+    transform: scale(1.15);
+}
+
+/*end of the confrence rooms style*/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
