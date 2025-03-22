@@ -162,17 +162,53 @@ main p {
 /*end of the hero section style*/
 
 
+/* Search Bar Style */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e7c712;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-bar button:hover {
+    background-color: #cc5500;
+}
+/*end of search bar style*/
+
+
 /* Style on the short display on the room section */
 .rooms {
     text-align: center;
     padding: 50px 20px;
     background-color: #fff;
+    display: flex;
+
 }
 
 .rooms h2 {
     font-size: 28px;
     color: #004080;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 /* Room Container */
@@ -200,8 +236,11 @@ main p {
     border-radius: 10px;
     object-fit: cover;
 }
+.rooms h2{
+    text-align: center;
+}
 
-.room h3 {
+.room h3{
     margin: 15px 0 10px;
     color: #333;
     font-size: 22px;
@@ -276,6 +315,296 @@ main p {
 }
 
 /*end of the confrence rooms style*/
+
+
+
+/*from here is the style for the amenities page*/
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.amenity {
+    text-align: center;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.amenity i{
+    font-size: 50px;
+}
+
+.amenity h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.amenity p {
+    font-size: 16px;
+    color: #666;
+}
+
+.amenity:hover {
+    transform: scale(1.1);
+}
+
+
+/*end of amenities styling page*/
+
+
+
+
+/*style for the about us page*/
+
+/* About Section */
+.about {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #007bff;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.about h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #007bff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+}
+
+.about ul li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about ul li i {
+    font-size: 22px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 20;
+        transform: translateY(0);
+    }
+}
+
+/*end of the style for the about page*/
+
+/*style for the contact us page*/
+
+.contact {
+    text-align: center;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/*end of the style for the contact page*/
+
+
+/*style for the room page*/
+/* Styling for the Rooms Section */
+.rooms {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.room {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.room:hover {
+    transform: scale(1.05);
+}
+
+.room img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.room h3 {
+    margin: 15px 0;
+    font-size: 22px;
+}
+
+.room p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c0392b;
+}
+
+/* Styling for Special Offers */
+.offers {
+    text-align: center;
+    background: #f8f8f8;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.offers h2 {
+    margin-bottom: 20px;
+}
+
+.offer {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+ 
+/*end of room style*/
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 40px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
